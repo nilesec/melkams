@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e 
+
+sudo chmod +x banner
+sudo ./banner
+
+read -p"What is the user name do you want :" user
+read -p"What is target ip :" ip
+
+sudo rdesktop -u "$user" -p- $ip
+
+echo -e "Well done"
+                      echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return .."
+               clear
+               

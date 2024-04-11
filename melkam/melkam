@@ -1,0 +1,225 @@
+#!/bin/bash
+#This script is written by Abrham asrat(the da4k)
+#this tools used to gain the most wanted infos in victim machine
+set -e
+
+clear
+
+
+
+
+cyan='\e[0;36m'
+green='\e[0;34m'
+okegreen='\033[92m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+blue='\e[1;34m'
+
+version=1.5
+Codename=melkam
+
+echo ""
+sleep 0.5
+# Check root
+[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo  $red "You must be root to run the script"; echo ; exit 1; }
+echo -e $green"===================================================================================================="
+
+
+echo -e $yellow"---------------------------------------------------------------------------------------------------"
+echo -e $yellow"------------------------abrham---------------------------------------------------------------------"
+echo -e $yellow"----------------------------from-Abugida-sec-----------------------------------------------------------"
+echo -e $yellow"---------------------------------------------------------------------------------------------------"
+
+                                        
+                                            sleep 0.5
+
+echo -e $okegreen""
+if [ $(id -u) != "0" ]; then
+
+      echo [✔]::[Check User]: $USER ;
+      sleep 0.5
+      echo [x]::[not root]: you need to be [root] to run this script.;
+      echo ""
+   	  sleep 0.5
+	  exit
+
+
+else
+
+
+   echo [✔]::[Check User]: $USER ;
+
+fi
+
+sleep 0.5
+
+
+
+# detect ctrl+c exiting
+trap ctrl_c INT
+ctrl_c() {
+clear
+echo -e $red"[*] (Ctrl + C ) Detected, Trying To Exit ..."
+sleep 0.5
+echo ""
+echo -e $yellow"[*] Thanks for Abugida SEC team  :)"
+exit
+}
+clear
+
+
+sleep 0.5
+
+function main_menu() 
+{
+     while :
+     do
+     
+
+
+
+ echo -e $cyan "    =====================                            ======================="
+ echo -e $green"   ====================== list off aviliabile tools  =======================    ";
+        echo
+        echo -e $white"	[$okegreen"1"$white]$cyan Maliciuous_Generator " 
+        
+        echo -e $white"	[$okegreen"2"$white]$cyan Wireless "
+        sleep 0.5
+        echo -e $white"	[$okegreen"3"$white]$cyan Scan_Your-->system "
+        
+        echo -e $white"	[$okegreen"4"$white]$cyan PassWord "
+        sleep 0.5
+        echo -e $white"	[$okegreen"5"$white]$cyan Reverse_shell "
+    
+        echo -e $white"	[$okegreen"6"$white]$cyan Web "
+        sleep 0.5
+        echo -e $white"	[$okegreen"7"$white]$cyan Our Courses   "
+        
+        echo -e $white"	[$okegreen"8"$white]$cyan Back To Main   "
+        
+        echo -e $white"	[$okegreen"9"$white]$cyan Checker   "
+	     echo -e $white"	[$okegreen"F"$white]$cyan fix-problem   "
+        echo -e $red "         [q] Quit         "
+        echo
+        echo -n -e $red'  \033[4mmelkam@Abugida:\033[0m '; tput sgr0
+        read option 
+
+        case "$option" in 
+                1) echo -e "	Malicious Apps"
+                  clear
+                   sudo chmod +x malcious
+                   sudo ./malcious
+                                       echo ""
+                             echo -e $red "##########  malcious ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                   clear
+                   ;;
+                2) echo -e "Wireless Tools"
+                   clear
+                    chmod +x wireless
+                    sudo ./wireless
+                    echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+                   ;;
+                3) echo -e "scan YOUR own Unix-based System"  
+                   sudo chmod +x system
+                   sudo ./system
+                   echo ""
+                             echo -e $red "##########  Scan Your Own System ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+                   ;;
+                4) echo -e "Password tool"
+                   sudo chmod +x pass
+                   sudo ./pass
+                   echo ""
+                             echo -e $red "##########  Pass Word tool ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+                   ;;
+                
+                5) echo -e "Reverse_shell"
+                   sudo chmod +x rever
+                   sudo ./rever
+                                       echo ""
+                             echo -e $red "##########  Reverse ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                   clear
+                ;;
+                6) echo -e "web server"
+                    cd web
+                    sudo chmod +x webs
+                    sudo ./webs
+                                        echo ""
+                             echo -e $red "##########  WEBS ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                    clear
+                    ;;
+                7) echo "oUR WEB"
+                    python3 web.py
+                                        echo ""
+                             echo -e $red "##########   ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                    clear
+                    ;;    
+                8) echo "Back"
+                   sudo chmod +x abugida
+                   sudo ./abugida
+                                       echo ""
+                             echo -e $red "########## abugida ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                   clear
+                   ;;    
+
+                F) echo "Fix Problems On this Code"
+                   sudo chmod +x requirement
+                   sudo ./requirement
+                   echo ""
+                             echo -e $red "##########  Requirements ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                   clear
+                   ;;     
+                9) echo "Checker"
+                   cd module
+                   sudo python3 sping
+                   cd ..
+                   
+                   
+                                       echo ""
+                             echo -e $red "##########  ping ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                   clear
+                   ;;     
+                q)  echo -e $yellow " Thanks For Using our Tools Good Bye  {Abugida Sec}  !!"
+                echo
+                exit 0 
+                ;;
+         esac
+    done
+    
+}
+main_menu

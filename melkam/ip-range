@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+ 
+read -p"Enter Your Ip To listen" ip
+
+sudo xterm -hold -fa monaco -fs 8 -bg black -e python3 arp_mitm.py -ip_range $ip

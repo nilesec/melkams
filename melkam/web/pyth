@@ -1,0 +1,35 @@
+#!/bin/python3
+
+
+import os
+import subprocess
+from cl import color
+import os
+import random
+import socket
+import time
+import subprocess
+import platform
+import datetime
+
+
+os.system(
+     f" sudo chmod +x banner && sudo ./banner"
+ )
+port=input(f"{color.ORANGE}Enter : Your Port You Wnat to open your web On this server > ")
+
+
+print(f"{color.ORANGE}================================================================================================") 
+print(f"{color.ORANGE}================================================================================================") 
+print(f"\n{color.GREEN}Initiate Your Web server.................")
+time.sleep(4)
+
+print(f"{color.ORANGE}================================================================================================") 
+print(f"{color.ORANGE}================================================================================================") 
+
+os.system(
+           f"sudo python3 -m http.server {port}"
+           )
+print(f"{color.ORANGE}================================================================================================") 
+print(f"{color.ORANGE}================================================================================================") 
+print(f"{color.ORANGE}================================================================================================") 

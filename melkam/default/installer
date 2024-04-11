@@ -1,0 +1,19 @@
+#!/bin/python3
+import os
+import sys
+def installer():
+    os.system("sudo cp -r melkamcyber /usr/share/")
+    os.system("sudo cp -r melkamcybers /usr/bin/ ")
+    os.system("sudo chmod +x melkamcybers")
+    
+
+print("1,kali\n")
+print("you want to install it on ? \n")
+choice = int(input("What is your choices: "))
+
+if choice == 1 :
+    installer()
+elif choice == 2:
+    print("coming soon")
+else:
+    print("invald Choices!!")

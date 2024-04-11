@@ -1,0 +1,205 @@
+#! /bin/bash
+#this script is created by Abugida security (Abrham Arat(the da4k))
+
+set -e
+
+clear
+
+
+
+
+#Colors
+cyan='\e[0;36m'
+green='\e[0;34m'
+okegreen='\033[92m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+blue='\e[1;34m'
+
+
+
+echo ""
+sleep 0.05
+# Check root
+[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo  $red "You must be root to run the script"; echo ; exit 1; }
+
+echo -e $green"===================================================================================================="
+echo -e $yellow"=================================================================================================="
+echo -e $red"===================================================================================================="
+echo -e $green"================================================================================================="
+                                        figlet -c Wireless
+echo -e $green"===================================================================================================="
+echo -e $yellow"=================================================================================================="
+echo -e $red"===================================================================================================="         
+sleep 0.05         
+
+# detect ctrl+c exiting
+trap ctrl_c INT
+ctrl_c() {
+clear
+echo -e $red"[*] (Ctrl + C ) Detected, Trying To Exit ..."
+sleep 0.05
+echo ""
+echo -e $yellow"[*] Thanks for Abugida SEC team  "
+exit
+}
+ 
+
+echo -e $blue ""
+echo ""
+echo -e $cyan"    Create by           $white":" $red Abugida Security Team @abrham_asrat"
+echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/Abugidasecurity"
+echo -e $cyan"    User     $white":" $red $(hostname) wellcome "
+                                 
+                                
+
+
+
+ echo -e $cyan ""
+ echo 
+
+    echo -e $white"	[$okegreen"1"$white]$cyan Lanscan "  
+    sleep 0.05
+                                
+    echo -e $white"	[$okegreen"2"$white]$cyan Wifi-Own"
+    sleep 0.05
+    echo -e $white"	[$okegreen"3"$white]$cyan Nmap_port_scanner"   
+                 sleep 0.05   
+    echo -e $white"	[$okegreen"4"$white]$cyan Arp-mitm "
+    sleep 0.05
+    echo -e $white"	[$okegreen"5"$white]$cyan arpSpoofer"    
+              sleep 0.05               
+    echo -e $white"	[$okegreen"6"$white]$cyan Ip-Location"
+    sleep 0.05
+    echo -e $white"	[$okegreen"7"$white]$cyan Ftp-Burute-attack "         
+              sleep 0.05  
+    echo -e $white"	[$okegreen"8"$white]$cyan ssh-Brute-Force "
+    sleep 0.05
+    echo -e $white"	[$okegreen"9"$white]$cyan Interface tool    "
+    sleep 0.05
+    echo -e $white"	[$okegreen"10"$white]$cyan Wifi Deauth    "
+    sleep 0.05
+    echo -e $white"	[$okegreen"d"$white]$cyan Dos Tool   "
+    
+    echo -e $white"	[$okegreen"q"$white]$cyan exit "
+   echo
+        echo -n -e $red'  \033[4mmelkam@Abugida:\033[0m ';  tput sgr0
+        read option 
+   case "$option" in  
+ 1) echo "lanscan"
+    python3 lanscan_arp.py
+    echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+    ;;
+
+2) echo "Wifi-Own"
+    python3 wifi_dos_own.py
+   echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+    ;;
+3) echo "nmap_port_scanner"
+   python3 nmap_port_scanner.py
+   echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+   ;;
+   
+4) echo "arp_mitm"
+   read -p "Enter Ip-Range:" range
+   
+   python3 arp_mitm.py -ip_range $range
+   echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+   ;;
+5) echo "arpSpoofer"
+    python3 arpSpoofer.py
+   echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+    ;;
+6) echo "Ip-location"
+   python3 ip2.py
+   echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+   ;;
+7) echo "Ftp-Brute-force"
+   python3 ftpBrute.py
+   echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+
+   ;;   
+8) echo "ssh-Brute-Force"
+   python3 sshBrute.py
+   echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+   ;;
+9) echo "Interface Tool"
+   cd module
+      sudo python3 Monitor.py
+      echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+      ;;
+10) echo "Wifi Deauth"
+      sudo python3 wifi_dos3.py
+      echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+      ;;
+
+d) echo "Dos"
+    cd module
+    sudo python3 dhcp.py
+     echo ""
+                             echo -e $red "##########  Wireless ############"
+                             echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return ..."
+                     clear
+      ;;
+
+          
+         q)  echo -e $yellow " Thanks For Using our Tools Good Bye  {Abugida Sec}  !!"
+                echo
+                exit 0 
+                ;;
+    
+        esac

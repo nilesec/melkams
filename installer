@@ -1,0 +1,59 @@
+#!/bin/bash
+
+cyan='\e[0;36m'
+lightcyan='\e[96m'
+green='\e[0;32m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+blue='\e[1;34m'
+
+
+cd melkam
+cd default
+sudo python3 installer
+cd ..
+cd ..
+sudo chmod +x logo
+sudo ./logo
+cd melkam
+echo -e $green""
+echo -e "Installing required files..........."
+sudo chmod +x requirement
+sudo ./requirement
+echo -e "The required Files install successfuly"
+cd ..
+
+	
+ 
+sudo chmod +x  assets/icon/melkam.jpg
+echo -e $yellow"We start the Process.......... "
+sudo cp -r melkam /usr/share/
+echo -e $yellow"Wait a second......."
+sudo cp -r melkams /usr/bin/
+chmod +x  assets/icon/melkam.jpg
+	mkdir    /home/melkam/
+	cp -r   assets/icon/melkam.jpg /home/melkam/
+	cp -r  /usr/share/melkam/assets/melkam.desktop  /home/melkam/
+	cp -vr assets /usr/share/melkam
+sudo cp -vr  /usr/share/melkam/assets/melkam.desktop /usr/share/kali-menu/applications/
+sudo mv -v  /usr/share/melkam/assets/melkam.desktop /usr/share/applications/
+
+sleep 2
+#sudo make install
+cp -r assets /usr/share/melkam
+cp -r assets /usr/share/
+cd /usr/bin
+
+sudo chmod +x melkams
+
+
+
+
+echo -e $green"USE this Tool For Ethical service !!"
+sleep 2
+echo -e $green"Be Patience almost The process Finished..................."
+echo -e $green"Type $yellow melkams with root $green on the terminal"
+
+

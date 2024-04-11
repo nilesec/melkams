@@ -1,0 +1,67 @@
+#!/bin/bash
+
+set -e 
+
+cyan='\e[0;36m'
+lightcyan='\e[96m'
+green='\e[0;32m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+blue='\e[1;34m'
+
+
+echo -e $yellow""
+echo -e "Installing nmap files...........!"
+echo -e $red""
+sudo apt install nmap -y
+echo -e $yellow
+echo -e "Installing python3 files...........!"
+echo -e $red""
+sudo apt install python3 -y
+echo -e $yellow
+echo -e "Installing lynis files...........!"
+echo -e $red""
+sudo apt install lynis -y
+echo -e $yellow
+echo -e "Installing figlet files...........!"
+echo -e $red""
+sudo apt install figlet -y
+echo -e $yellow
+echo -e "Installing xterm files...........1"
+echo -e $red""
+sudo apt install xterm -y
+echo -e $yellow
+echo -e "Installing arp files...........!"
+echo -e $red""
+sudo apt install arp-scan -y
+echo -e $yellow
+echo -e "Installing apktool files...........!"
+echo -e $red""
+sudo apt install apktool -y
+#echo -e $yellow
+#echo -e "Installing zipalign files...........!"
+#echo -e $red""
+#sudo apt install zipalign -y
+#echo -e $yellow
+#echo -e "Installing android-sdk files...........!"
+#echo -e $red""
+#sudo apt install android-sdk -y
+echo -e $yellow""
+echo -e "Installing Cupp files...................!"
+echo -e $red
+sudo apt install cupp -y
+echo -e $yellow""
+echo -e "Installing rdesktop files...................!"
+echo -e $red
+sudo apt install rdesktop -y
+echo -e $yellow""
+echo -e "Installing evil-winrm files...................!"
+echo -e $red
+sudo apt install evil-winrm -y
+echo -e $yellow""
+echo -e "Installing steg files...................!"
+echo -e $red
+sudo apt install steghide -y
+echo -e ""

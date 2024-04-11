@@ -1,0 +1,46 @@
+#!/bin/python3
+
+# this script is developed by abugida security team Abrham Asrat(melkam)
+#dont harm any one using this script
+
+
+import os
+import subprocess
+from cl import color
+import os
+import random
+import socket
+import time
+import subprocess
+import platform
+import datetime
+
+os.system(
+     f" sudo chmod +x smss && sudo ./smss"
+ 
+ )
+
+
+
+print(f"\n{color.WHITE} Well come Mr/Ms {color.RED} " + "{color.WHITE} to our Smart Tools!!")
+phonenumber=input(f"\n{color.ORANGE} Enter : The Phone number You want To display On the Target With country code > ")
+message=input(f"\n{color.ORANGE} Enter : Your message here > ")
+smtpaddr=input(f"\n{color.ORANGE} Enter : Your your smtp address > ")
+subject=input(f"\n{color.ORANGE} Enter : Your subject You Want To  > ")
+username=input(f"\n{color.ORANGE} Enter : Your smtp user name > ")
+smtppass=input(f"\n{color.ORANGE} Enter : smtp password > ")
+
+
+print("===================================================================================================================")
+print("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
+
+print("Well Its Started Your Service Please be pattient")
+print("///////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
+print("===================================================================================================================")
+
+
+
+
+os.system( 
+             f"sudo xterm -hold -fa monaco -fs 6 -bg black -e msfconsole -x  ' use auxiliary/client/sms/send_text ; set CELLNUMBERS {phonenumber} ; set  SMSCARRIER google ; set SMSMESSAGE  {message} ; set SMSSUBJECT {subject} ; set SMTPADDRESS {smtpaddr} ;  set SMTPPASSWORD {smtppass} ; set SMTPPORT 25 ; set SMTPUSERNAME {username}; run '"
+             )

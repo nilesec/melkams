@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo ./banner
+
+
+read -p" Type The Ip You Wnt To Check: " ip
+echo -e "our data have 281725 Malcious Ip list !!! "
+echo -e "If The Ip is Malcious You See iF not It dissapear......."
+
+sudo cat "List of malicious ip it around 281725 IPs.txt" | grep $ip

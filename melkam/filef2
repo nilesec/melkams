@@ -1,0 +1,76 @@
+#!/bin/bash
+# this script is developed by abugida security team Abrham Asrat(melkam)
+#dont harm any one using this script
+
+set -e
+
+clear
+
+
+
+
+#Color
+cyan='\e[0;36m'
+green='\e[0;34m'
+okegreen='\033[92m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+BlueF='\e[1;34m'
+
+os=windows
+format=exe
+
+echo ""
+sleep 0.05
+# Check root
+[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo  $red "You must be root to run the script"; echo ; exit 1; }
+
+                
+       # read -p "$name: What OS Do you want(windows,android,linux) :" os 
+                   
+
+                    echo -e $blue ""
+echo ""
+echo -e $cyan"    Create by           $white":" $red Abugida Security Team @abrham_asrat"
+echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/Abugidasecurity"
+
+ echo -e $cyan "    =====================                            ======================="
+ echo -e $green"   ====================== list off File Format tools =======================    ";
+        echo
+        sleep 0.05
+        echo -e $white"	[$okegreen"1"$white]$cyan Video" 
+        sleep 0.05
+        echo -e $white"	[$okegreen"2"$white]$cyan PDF " 
+        sleep 0.05
+
+          echo 
+        echo -n -e $red'  \033[4mmelkam@Abugida:\033[0m '; tput sgr0
+        read option 
+
+        case "$option" in 
+          1) echo -e $okegreen "Vidio)"
+               cd module
+               sudo python3 vidio2.py
+                                     echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return .."
+              
+
+               clear
+               ;;
+          2) echo -e "Pdf"
+ 
+            cd module
+            sudo python3 pdf2.py
+                                echo
+                             echo -e $green "【!】Return To The Main Menu【!】"
+                             read -p "pess any key to return .."
+               clear
+
+          
+             ;;
+            
+       esac
+       

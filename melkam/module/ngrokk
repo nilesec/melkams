@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo ./banner
+
+echo -e "This script used To generate Public Ip instead of Private for your Lhost And Lport apps .....................============"
+
+read -p"What Ia Your Port :" lport
+
+sudo chmod +x ngrok
+
+
+ ./ngrok http $lport

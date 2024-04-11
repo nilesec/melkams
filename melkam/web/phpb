@@ -1,0 +1,6 @@
+#!/bin/bash
+
+read -p"What is your Host/ip:" host
+read -p"what is your port:" port
+
+sudo php -S $host:$port

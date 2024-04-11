@@ -1,0 +1,48 @@
+#!/bin/bash
+# this script is developed by abugida security team Abrham Asrat(melkam)
+#dont harm any one using this script
+
+set -e
+
+clear
+
+
+
+
+#Colors
+cyan='\e[0;36m'
+lightcyan='\e[96m'
+green='\e[0;32m'
+lightgreen='\e[1;32m'
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+blue='\e[1;34m'
+
+os=android
+format=apk
+
+echo ""
+sleep 0.05
+# Check root
+[[ `id -u` -eq 0 ]] > /dev/null 2>&1 || { echo  $red "You must be root to run the script"; echo ; exit 1; }
+
+echo -e $green""
+            
+echo -e $green"===================================================================================================="
+echo -e $yellow"=================================================================================================="
+echo -e $red"===================================================================================================="
+echo -e $green"================================================================================================="
+                                        figlet -c Sms-Spoofer
+echo -e $green"===================================================================================================="
+echo -e $yellow"=================================================================================================="
+echo -e $red"===================================================================================================="    
+                       
+                          
+              
+        
+                    echo -e $blue ""
+echo ""
+echo -e $cyan"    Create by           $white":" $red Abugida Security Team @abrham_asrat"
+echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/Abugidasecurity"
+echo -e $lightgreen

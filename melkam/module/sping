@@ -1,0 +1,44 @@
+#!/bin/python3
+from os import system
+from cl import color
+
+print(f"{color.GREEN}1,Check If Its have web server of Ip")
+print(f"{color.GREEN}2,Chek if the host is up")
+print(f"{color.GREEN}3, Give new Ip for Your Devices ")
+choice = int(input(f"{color.RED}What is yor Choices: "))
+
+
+def ping():
+    kali = (input(f"{color.GREEN}Enter The Ip To See If its Up: "))
+    system("ping -c 4 " + kali)
+
+
+def check():
+    webserver = input(f"{color.BLUE} Enter the ip You want to check if its have the web: ")
+    system("nmap -sV -p 80,443 " + webserver + " -oS abugida")
+    system("clear")
+    print("The out put is coming!")
+    see = input(f"{color.ORANGE}do you want to see Results[Y]/[N]: ")
+    if see == "y" or see == "Y":
+        system("cat abugida | grep 80 && cat abugida | grep 443")
+    elif see == "N" or see == "n":
+        print("it exit the program")
+        system("clear")
+    else:
+        print("You enterde The wrong Vlue! ")
+
+
+def newip():
+    iface = input(f"{color.GREEN}Give me The interface USED for assign new ip ")
+    system("sudo dhclient " + iface)
+    print("It wiil assign you the new ip for your IPtable ")
+
+
+if choice == 1:
+    check()
+elif choice == 2:
+    ping()
+elif choice == 3:
+    newip()
+else:
+    system("clear")
