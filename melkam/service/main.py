@@ -60,7 +60,7 @@ def adbexploit():
 def views2():
    try:
     password = int(input(f"{color.GREEN}Enter your Password: "))
-    if password == "":
+    if password == 1234:
         try:
            print(f"""
           
