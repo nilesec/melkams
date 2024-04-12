@@ -1,5 +1,5 @@
 #!/bin/bash
-# this script is developed by abugida security team Abrham Asrat(melkam)
+# this script is developed by Nile security team Abrham Asrat(melkam)
 #dont harm any one using this script
 
 set -e
@@ -33,8 +33,8 @@ sleep 0.05
 
                     echo -e $blue ""
 echo ""
-echo -e $cyan"    Create by           $white":" $red Abugida Security Team @abrham_asrat"
-echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/Abugidasecurity"
+echo -e $cyan"    Create by           $white":" $red Nile Security Team @abrham_asrat"
+echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/@nilesecs"
 
  echo -e $cyan "    =====================                            ======================="
  echo -e $green"   ====================== list off File Format tools =======================    ";
@@ -46,7 +46,7 @@ echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/A
         sleep 0.05
 
           echo 
-        echo -n -e $red'  \033[4mmelkam@Abugida:\033[0m '; tput sgr0
+        echo -n -e $red'  \033[4mmelkam@Nilesecssecs:\033[0m '; tput sgr0
         read option 
 
         case "$option" in 

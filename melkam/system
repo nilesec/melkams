@@ -43,15 +43,15 @@ clear
 echo -e $red"[*] (Ctrl + C ) Detected, Trying To Exit ..."
 sleep 0.05
 echo ""
-echo -e $yellow"[*] Thanks for Abugida SEC team  "
+echo -e $yellow"[*] Thanks for Nile SEC team  "
 exit
 }
  
 
 echo -e $blue ""
 echo ""
-echo -e $cyan"    Create by           $white":" $red Abugida Security Team @abrham_asrat"
-echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/Abugidasecurity"
+echo -e $cyan"    Create by           $white":" $red Nile Security Team @abrham_asrat"
+echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/@nilesecs"
 
  echo -e $cyan "    =====================                            ======================="
  echo -e $green"   ====================== list off aviliabile tools  =======================    ";
@@ -63,7 +63,7 @@ echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/A
         echo -e $white"           [$okegreen"3"$white]$cyan     Quit "
 
         echo
-        echo -n -e $red'  \033[4mmelkam@Abugida:\033[0m '; tput sgr0
+        echo -n -e $red'  \033[4mmelkam@Nilesecssecs:\033[0m '; tput sgr0
         read option 
          case "$option" in
           1) echo -e "Full-system-check"
@@ -84,7 +84,7 @@ echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/A
                              read -p "pess any key to return ..."
                      clear
       ;;  
-    q)  echo -e $yellow " Thanks For Using our Tools Good Bye  {Abugida Sec}  !!"
+    q)  echo -e $yellow " Thanks For Using our Tools Good Bye  {Nile Sec}  !!"
                 echo
                 exit 0 
                 ;;

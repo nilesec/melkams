@@ -29,7 +29,7 @@ echo -e $green"=================================================================
 
 echo -e $yellow"---------------------------------------------------------------------------------------------------"
 echo -e $yellow"------------------------abrham---------------------------------------------------------------------"
-echo -e $yellow"----------------------------from-Abugida-sec-----------------------------------------------------------"
+echo -e $yellow"----------------------------from-Nile-sec-----------------------------------------------------------"
 echo -e $yellow"---------------------------------------------------------------------------------------------------"
 
                                         
@@ -64,7 +64,7 @@ clear
 echo -e $red"[*] (Ctrl + C ) Detected, Trying To Exit ..."
 sleep 0.5
 echo ""
-echo -e $yellow"[*] Thanks for Abugida SEC team  :)"
+echo -e $yellow"[*] Thanks for Melkams SEC team  :)"
 exit
 }
 clear
@@ -103,7 +103,7 @@ function main_menu()
 	     echo -e $white"	[$okegreen"F"$white]$cyan fix-problem   "
         echo -e $red "         [q] Quit         "
         echo
-        echo -n -e $red'  \033[4mmelkam@Abugida:\033[0m '; tput sgr0
+        echo -n -e $red'  \033[4mmelkam@Nilesecs:\033[0m '; tput sgr0
         read option 
 
         case "$option" in 
@@ -214,7 +214,7 @@ function main_menu()
                              read -p "pess any key to return ..."
                    clear
                    ;;     
-                q)  echo -e $yellow " Thanks For Using our Tools Good Bye  {Abugida Sec}  !!"
+                q)  echo -e $yellow " Thanks For Using our Tools Good Bye  {Melkam Sec}  !!"
                 echo
                 exit 0 
                 ;;

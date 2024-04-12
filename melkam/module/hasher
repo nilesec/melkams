@@ -69,7 +69,7 @@ sleep 4
         echo -e $white"	[$okegreen"2"$white]$cyan no" 
         sleep 0.05
       echo 
-        echo -n -e $red'  \033[4mmelkam@Abugida:\033[0m '; tput sgr0
+        echo -n -e $red'  \033[4mmelkam@Nilesecs:\033[0m '; tput sgr0
 
 read choice
 

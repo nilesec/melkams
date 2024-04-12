@@ -27,14 +27,14 @@ cd ..
 
 	
  
-sudo chmod +x  assets/icon/melkam.jpg
+sudo chmod +x  assets/icon/melkam.jpeg
 echo -e $yellow"We start the Process.......... "
 sudo cp -r melkam /usr/share/
 echo -e $yellow"Wait a second......."
 sudo cp -r melkams /usr/bin/
-chmod +x  assets/icon/melkam.jpg
+chmod +x  assets/icon/melkam.jpeg
 	mkdir    /home/melkam/
-	cp -r   assets/icon/melkam.jpg /home/melkam/
+	cp -r   assets/icon/melkam.jpeg /home/melkam/
 	cp -r  /usr/share/melkam/assets/melkam.desktop  /home/melkam/
 	cp -vr assets /usr/share/melkam
 sudo cp -vr  /usr/share/melkam/assets/melkam.desktop /usr/share/kali-menu/applications/

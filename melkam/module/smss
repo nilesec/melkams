@@ -43,6 +43,6 @@ echo -e $red"===================================================================
         
                     echo -e $blue ""
 echo ""
-echo -e $cyan"    Create by           $white":" $red Abugida Security Team @abrham_asrat"
-echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/Abugidasecurity"
+echo -e $cyan"    Create by           $white":" $red Nile Security Team @abrham_asrat"
+echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/@nilesecs"
 echo -e $lightgreen

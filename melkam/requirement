@@ -40,14 +40,14 @@ echo -e $yellow
 echo -e "Installing apktool files...........!"
 echo -e $red""
 sudo apt install apktool -y
-#echo -e $yellow
-#echo -e "Installing zipalign files...........!"
-#echo -e $red""
-#sudo apt install zipalign -y
-#echo -e $yellow
-#echo -e "Installing android-sdk files...........!"
-#echo -e $red""
-#sudo apt install android-sdk -y
+echo -e $yellow
+echo -e "Installing zipalign files...........!"
+echo -e $red""
+sudo apt install zipalign -y
+echo -e $yellow
+echo -e "Installing android-sdk files...........!"
+echo -e $red""
+sudo apt install android-sdk -y
 echo -e $yellow""
 echo -e "Installing Cupp files...................!"
 echo -e $red

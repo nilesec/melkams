@@ -43,8 +43,8 @@ echo -e $red"===================================================================
        # read -p "$name: What OS Do you want(windows,android,linux) :" os 
                                       echo -e $blue ""
 echo ""
-echo -e $cyan"    Create by           $white":" $red Abugida Security Team @abrham_asrat"
-echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/Abugidasecurity"
+echo -e $cyan"    Create by           $white":" $red Nile Security Team @abrham_asrat"
+echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/@nilesecs"
 
  echo -e $cyan "    =====================                            ======================="
  echo -e $green"   ====================== list off aviliabile tools  =======================    ";
@@ -57,7 +57,7 @@ echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/c/A
        
 
         echo 
-        echo -n -e $red'  \033[4m$who@Abugida:\033[0m '; tput sgr0
+        echo -n -e $red'  \033[4m$who@ANilesecs:\033[0m '; tput sgr0
         read option 
 
         case "$option" in 

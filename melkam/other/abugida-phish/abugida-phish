@@ -147,7 +147,7 @@ msg_exit() {
 about() {
 	{ clear; banner; echo; }
 	cat <<- EOF
-		${GREEN} Author   ${RED}:  ${ORANGE}Abugida Security ${RED}[ ${ORANGE}Abrham asrat (melkam) ${RED}]
+		${GREEN} Author   ${RED}:  ${ORANGE}Nile Security ${RED}[ ${ORANGE}Abrham asrat (melkam) ${RED}]
 		${GREEN} Github   ${RED}:  ${CYAN}
 		${GREEN} Social   ${RED}:  ${CYAN}
 		${GREEN} Version  ${RED}:  ${ORANGE}5
