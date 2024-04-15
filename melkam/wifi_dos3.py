@@ -48,7 +48,7 @@ def check_for_essid(essid, lst):
 
 # If the user doesn't run the program with super user privileges, don't allow them to continue.
 if not 'SUDO_UID' in os.environ.keys():
-    print("Try running this program with sudo.")
+    print("Try to run this program with sudo.)opps.")
     exit()
 
 # Remove .csv files before running the script.
