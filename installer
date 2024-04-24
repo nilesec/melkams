@@ -10,14 +10,32 @@ yellow='\e[1;33m'
 blue='\e[1;34m'
 
 
-cd melkam
+cd melkams
 cd default
+
+echo -e $green""
+            
+echo -e $green"===================================================================================================="
+echo -e $yellow"=================================================================================================="
+                                           figlet -c Melkam-cyber tool-Installer
+echo -e $yellow"=================================================================================================="
+echo -e $red"===================================================================================================="  
+                       
+   sleep 1                  
+              
+        
+                    echo -e $blue ""
+echo ""
+echo -e $cyan"    Create by           $white":" $red Nile Security Team @abrham_asrat"
+echo -e $cyan"    Youtube Channel     $white":" $red https://www.youtube.com/@nilesecs"
+echo -e $lightgreen
+
 sudo python3 installer
 cd ..
 cd ..
 sudo chmod +x logo
 sudo ./logo
-cd melkam
+cd melkams
 echo -e $green""
 echo -e "Installing required files..........."
 sudo chmod +x requirement
@@ -29,24 +47,24 @@ cd ..
  
 sudo chmod +x  assets/icon/melkam.jpeg
 echo -e $yellow"We start the Process.......... "
-sudo cp -r melkam /usr/share/
+sudo cp -r melkams /usr/share/
 echo -e $yellow"Wait a second......."
 sudo cp -r melkams /usr/bin/
 chmod +x  assets/icon/melkam.jpeg
-	mkdir    /home/melkam/
-	cp -r   assets/icon/melkam.jpeg /home/melkam/
-	cp -r  /usr/share/melkam/assets/melkam.desktop  /home/melkam/
-	cp -vr assets /usr/share/melkam
-sudo cp -vr  /usr/share/melkam/assets/melkam.desktop /usr/share/kali-menu/applications/
-sudo mv -v  /usr/share/melkam/assets/melkam.desktop /usr/share/applications/
+	mkdir    /home/melkams/
+	cp -r   assets/icon/melkam.jpeg /home/melkams/
+	cp -r  /usr/share/melkam/assets/melkam.desktop  /home/melkams/
+	cp -vr assets /usr/share/melkams
+sudo cp -vr  /usr/share/melkams/assets/melkam.desktop /usr/share/kali-menu/applications/
+sudo mv -v  /usr/share/melkams/assets/melkam.desktop /usr/share/applications/
 
 sleep 2
 #sudo make install
-cp -r assets /usr/share/melkam
+cp -r assets /usr/share/melkams
 cp -r assets /usr/share/
 cd /usr/bin
 
-sudo chmod +x melkams
+sudo chmod +x melkam
 
 
 
@@ -54,6 +72,7 @@ sudo chmod +x melkams
 echo -e $green"USE this Tool For Ethical service !!"
 sleep 2
 echo -e $green"Be Patience almost The process Finished..................."
-echo -e $green"Type $yellow melkams with root $green on the terminal"
+echo -e $green"Type $yellow melkam with root $green on the terminal"
+echo -e $yellow"Thanks For My Mother(Melkam) and My full Family"
 
 

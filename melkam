@@ -3,7 +3,7 @@
 #This script is written by Abrham asrat(the da4k)
 #this tools used to gain the most wanted infos in victim machine
 set -e
- cd /usr/share/melkam
+ cd /usr/share/melkams/
  
  sudo chmod +x ./abugida
  exec ./abugida

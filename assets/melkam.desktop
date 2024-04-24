@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=melkam
 Encoding=UTF-8
-Exec=/usr/share/kali-menu/exec-in-shell "sudo melkams"
-Icon=/home/melkam/melkam.jpeg
+Exec=/usr/share/kali-menu/exec-in-shell "sudo melkam"
+Icon=/home/melkams/melkam.jpeg
 StartupNotify=false
 Terminal=true
 Type=Application
